@@ -4,7 +4,8 @@
     Copyright Since 2005 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
     www.coldbox.org | www.luismajano.com | www.ortussolutions.com
     ********************************************************************************
-    Deploy tag stamper
+    Deploy tag stamper. Just place it alongside your tag and run it.
+    You can also add it to your build process
     by Luis Majano                                                                                 
     ====================================================================== -->
 <project name="deploytag" default="do.deploytag" basedir=".">

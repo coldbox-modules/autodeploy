@@ -1,21 +1,16 @@
-WELCOME TO THE BUGLOGHQ MODULE
+WELCOME TO THE AUTODEPLOY MODULE
 ==============================
-BugLogHQ Created & copyright by Oscar Arevalo (www.bugloghq.com)
-
-This module connects your ColdBox application to send bug reports and even
-LogBox integration into BugLogHQ
+This module checks a tag file for timestamp modifications and if detected it will then continue to stop the ColdFusion application via `applicationStop()`.  It can also be optionally configured to execute a deploy command object when the timestamp check is detected.
 
 ##LICENSE
 Apache License, Version 2.0.
 
 ##IMPORTANT LINKS
-- http://www.bugloghq.com
-- https://github.com/ColdBox/cbox-bugloghq
+- https://github.com/ColdBox/cbox-autodeploy
 
 ##SYSTEM REQUIREMENTS
 - Railo 4+
 - ColdFusion 9+
-- BugLogHQ 1.8+
 - ColdBox 4+
 
 ********************************************************************************

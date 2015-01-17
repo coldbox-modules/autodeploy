@@ -4,14 +4,14 @@
 	"version"	: "1.0.0",
 	"slug"		: "autodeploy",
 	"type"		: "modules",
-	"repository"		: { "type" : "git", "url" : "https://github.com/ColdBox/cbox-bugloghq" },
-	"shortDescription"	: "A module to send bug reports to BugLogHQ by Oscar Arevalo",
+	"repository"		: { "type" : "git", "url" : "https://github.com/ColdBox/cbox-autodeploy" },
+	"shortDescription"	: "A module that detects new deploys and auto-restarts a ColdBox application with some added pizzazz",
 	"engines"	: [
 		{ "type" : "railo", "version" : ">4" },
-		{ "type" : "adobe", "version" : ">9.02" },
+		{ "type" : "adobe", "version" : ">9.02" }
 	],
 	"license"			: [ 
 		{ "type" : "Apache2", "url" : "http://www.apache.org/licenses/LICENSE-2.0.html" } 
 	],
-	"ignore" : [ "apidocs/*", "readme.md", "instructions.md", "changelog.md", "handlers/*" ]
+	"ignore" : [ "tests/*" ]
 }
