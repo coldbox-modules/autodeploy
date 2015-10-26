@@ -8,7 +8,7 @@ Just drop into your modules folder or use the box-cli to install
 You can add configuration settings to your `ColdBox.cfc` under a structure called `autodeploy`:
 
 ```js
-bugloghq = {
+autodeploy = {
     // The tag file location, realtive or absolute
     "tagFile" : "config/_deploy.tag",
     // The model to use for running deployment commands. Must be a valid WireBox mapping
