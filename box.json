@@ -1,7 +1,7 @@
 {
 	"name" 		: "AutoDeploy",
 	"author" 	: "Ortus Solutions <info@ortussolutions.com>",
-	"version"	: "1.0.0",
+	"version"	: "1.0.1",
 	"slug"		: "autodeploy",
 	"type"		: "modules",
 	"repository"		: { "type" : "git", "url" : "https://github.com/ColdBox/cbox-autodeploy" },
