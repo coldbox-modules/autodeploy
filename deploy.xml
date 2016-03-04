@@ -14,7 +14,7 @@
         Creates a new deploy tag timestamp
     </description>
     
-    <property name="deploytag.path" value="_deploy.tag" />
+    <property name="deploytag.path" value="config/_deploy.tag" />
     
     <target name="init">
         <!-- Init TimeStamp -->
