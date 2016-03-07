@@ -71,7 +71,7 @@ component {
 		//defaults
 		configStruct.autodeploy = {
 			// The tag file location, realtive or absolute
-			"tagFile" : "config/_deploy.tag",
+			"tagFile" : "#modulePath#/config/_deploy.tag",
 			// The model to use for running deployment commands. Must be a valid WireBox mapping
 			"deployCommandObject" :  ""
 		};
