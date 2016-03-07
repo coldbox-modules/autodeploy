@@ -16,6 +16,9 @@ autodeploy = {
 };
 ```
 
+## Update Deploy Tag
+To update the timestamp in the deploy tag, run the `deploy.xml` file in Ant.  
+
 ## Deploy Command Object
 You can optionally create and register a deploy command object via WireBox.  This command object must implement one method:
 
