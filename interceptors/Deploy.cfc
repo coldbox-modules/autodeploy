@@ -58,7 +58,7 @@ component extends="coldbox.system.Interceptor" accessors="true"{
 						try{
 							// commandobject
 							if( len( variables.deployCommandObject ) ){
-								getvariables( variables.deployCommandObject ).execute();
+								getInstance( variables.deployCommandObject ).execute();
 								// Log
 								if( log.canInfo() ){
 									log.info( "Deploy command object executed!" );
