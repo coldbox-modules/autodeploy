@@ -20,7 +20,8 @@ component{
 	// COLDBOX APPLICATION KEY OVERRIDE
 	COLDBOX_APP_KEY 		 = "";
 
-	this.mappings[ "moduletester" ] = expandpath( "../../" );
+	this.mappings[ "/root" ] 			= getDirectoryFromPath( getCurrentTemplatePath() );
+	this.mappings[ "/moduletester" ] 	= expandpath( "../../" );
 
 	// application start
 	public boolean function onApplicationStart(){

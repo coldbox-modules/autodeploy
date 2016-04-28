@@ -17,7 +17,7 @@ component{
 	this.mappings[ "/tests" ] = getDirectoryFromPath( getCurrentTemplatePath() );
 	// Map back to its root
 	rootPath = REReplaceNoCase( this.mappings[ "/tests" ], "tests(\\|/)", "" );
-	this.mappings["/root"]   = rootPath;
+	this.mappings[ "/root" ]   = rootPath;
 
 	this.mappings[ "moduletester" ] = expandpath( "../../../" );
 
