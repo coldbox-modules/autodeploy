@@ -72,6 +72,13 @@
 			info = [ "coldbox.system" ]
 		};
 
+		autodeploy = {
+		    // The tag file location, realtive or absolute from the root of your application.
+		    "tagFile" : "#appMapping#/config/_deploy.tag",
+		    // The model to use for running deployment commands. Must be a valid WireBox mapping
+		    "deployCommandObject" :  ""
+		};
+
 	}
 
 	/**
