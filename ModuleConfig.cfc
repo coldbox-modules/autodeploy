@@ -1,8 +1,8 @@
 /**
-*********************************************************************************
-* Copyright Since 2005 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
-* www.coldbox.org | www.luismajano.com | www.ortussolutions.com
-********************************************************************************
+* Copyright since 2012 by Ortus Solutions, Corp
+* www.ortussolutions.com/products/contentbox
+* ---
+* Module Config
 */
 component {
 
@@ -11,7 +11,7 @@ component {
 	this.author 			= "Ortus Solutions";
 	this.webURL 			= "http://www.ortussolutions.com";
 	this.description 		= "Auto deployment detector";
-	this.version			= "1.0.0";
+	this.version			= "1.1.0";
 	// If true, looks for views in the parent first, if not found, then in the module. Else vice-versa
 	this.viewParentLookup 	= true;
 	// If true, looks for layouts in the parent first, if not found, then in module. Else vice-versa
@@ -31,10 +31,8 @@ component {
 	function configure(){
 		// SES Routes
 		routes = [
-			// Module Entry Point
-			{pattern="/", handler="test",action="index"},
 			// Convention Route
-			{pattern="/:handler/:action?"}
+			{ pattern="/:handler/:action?" }
 		];
 
 		// Interceptors

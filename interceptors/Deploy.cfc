@@ -52,13 +52,13 @@ component extends="coldbox.system.Interceptor" accessors="true"{
 			
 			//Validate Timestamp
 			if ( dateCompare( tagTimestamp, appTimestamp ) eq 1 ){
-				lock scope="application" type="exclusive" timeout="25"{
+				lock scope="application" type="exclusive" timeout="25" throwOntimeout="true"{
 					// concurrency lock
 					if ( dateCompare( tagTimestamp, appTimestamp ) eq 1 ){
 						try{
 							// commandobject
 							if( len( variables.deployCommandObject ) ){
-								getvariables( variables.deployCommandObject ).execute();
+								getInstance( variables.deployCommandObject ).execute();
 								// Log
 								if( log.canInfo() ){
 									log.info( "Deploy command object executed!" );

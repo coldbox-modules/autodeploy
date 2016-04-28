@@ -2,6 +2,8 @@
 logs/*.log
 settings.xml
 .netbeans
-test/results/*.properties
-test/results/*.html
-test/results/*.log
+# testing
+tests/results/*
+tests/coldbox/*
+tests/testbox/*
+tests/logs/*

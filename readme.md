@@ -1,21 +1,61 @@
-WELCOME TO THE AUTODEPLOY MODULE
-==============================
+# WELCOME TO THE AUTODEPLOY MODULE
 This module checks a tag file for timestamp modifications and if detected it will then continue to stop the ColdFusion application via `applicationStop()`.  It can also be optionally configured to execute a deploy command object when the timestamp check is detected.
 
-##LICENSE
+## LICENSE
 Apache License, Version 2.0.
 
-##IMPORTANT LINKS
+## IMPORTANT LINKS
 - https://github.com/ColdBox/cbox-autodeploy
 
-##SYSTEM REQUIREMENTS
-- Railo 4+
-- ColdFusion 9+
+## SYSTEM REQUIREMENTS
+- Lucee 4.5+
 - ColdBox 4+
+
+# INSTRUCTIONS
+
+Just drop into your modules folder or use [CommandBox](http://www.ortussolutions.com/products/commandbox) to install
+
+`box install autodeploy`
+
+## Settings
+You can add configuration settings to your `ColdBox.cfc` under a structure called `autodeploy`:
+
+```js
+autodeploy = {
+    // The tag file location, realtive or absolute from the root of your application.
+    "tagFile" : "config/_deploy.tag",
+    // The model to use for running deployment commands. Must be a valid WireBox mapping
+    "deployCommandObject" :  ""
+};
+```
+
+## Deploy Tag
+The deploy tag: `_deploy.tag` must be in the root's `config` folder of your application. The module ships with a `config` folder. You must copy the contents to your application's root `config` folder.
+
+## Update Deploy Tag
+
+### CommandBox
+We include a recipe for you to update the deploy tag: `config/deploy.boxr`.  Just run the recipe using CommandBox: `box recipe deploy.boxr`
+
+### ANT
+To update the timestamp in the deploy tag, run the `config/deploy.xml` file in Ant within the module or touch the file with a new timestamp. 
+
+### Manually (Other)
+Just change the contents of the file or touch its timestamp.
+
+## Deploy Command Object
+You can optionally create and register a deploy command object via WireBox.  This command object must implement one method:
+
+```
+function execute(){}
+```
+
+Which will be executed upon a new timestamp change for you before stopping the application and restarting it.
+
 
 ********************************************************************************
 Copyright Since 2005 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
-www.coldbox.org | www.luismajano.com | www.ortussolutions.com
+www.ortussolutions.com
 ********************************************************************************
 ####HONOR GOES TO GOD ABOVE ALL
 Because of His grace, this project exists. If you don't like this, then don't read it, its not for you.

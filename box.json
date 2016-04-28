@@ -1,15 +1,11 @@
 {
 	"name" 		: "AutoDeploy",
 	"author" 	: "Ortus Solutions <info@ortussolutions.com>",
-	"version"	: "1.0.1",
+	"version"	: "1.1.0",
 	"slug"		: "autodeploy",
 	"type"		: "modules",
-	"repository"		: { "type" : "git", "url" : "https://github.com/ColdBox/cbox-autodeploy" },
-	"shortDescription"	: "A module that detects new deploys and auto-restarts a ColdBox application with some added pizzazz",
-	"engines"	: [
-		{ "type" : "railo", "version" : ">4" },
-		{ "type" : "adobe", "version" : ">9.02" }
-	],
+	"repository"	: { "type" : "git", "url" : "https://github.com/ColdBox/cbox-autodeploy" },
+	"description"	: "A module that detects new deploys and auto-restarts a ColdBox application with some added pizzazz",
 	"license"			: [ 
 		{ "type" : "Apache2", "url" : "http://www.apache.org/licenses/LICENSE-2.0.html" } 
 	],

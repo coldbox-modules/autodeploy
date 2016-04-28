@@ -2,7 +2,7 @@
 <!-- ====================================================================== 
     ********************************************************************************
     Copyright Since 2005 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
-    www.coldbox.org | www.luismajano.com | www.ortussolutions.com
+    www.ortussolutions.com
     ********************************************************************************
     Deploy tag stamper. Just place it alongside your tag and run it.
     You can also add it to your build process
@@ -14,7 +14,7 @@
         Creates a new deploy tag timestamp
     </description>
     
-    <property name="deploytag.path" value="config/_deploy.tag" />
+    <property name="deploytag.path" value="_deploy.tag" />
     
     <target name="init">
         <!-- Init TimeStamp -->
