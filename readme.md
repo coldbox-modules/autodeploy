@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/coldbox-modules/cbox-autodeploy.svg?branch=master)](https://travis-ci.org/coldbox-modules/cbox-autodeploy)
+
 # WELCOME TO THE AUTODEPLOY MODULE
 This module checks a tag file for timestamp modifications and if detected it will then continue to stop the ColdFusion application via `applicationStop()`.  It can also be optionally configured to execute a deploy command object when the timestamp check is detected.
 
