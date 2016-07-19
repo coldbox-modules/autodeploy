@@ -79,6 +79,10 @@ component extends="coldbox.system.Interceptor" accessors="true"{
 					} // end if dateCompare
 				} //end lock
 			} // end if dateCompare
+
+			// stop interception chain
+			return true;
+			
 		} // end if setting exists
 		else {
 			configure();
