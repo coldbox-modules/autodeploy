@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.2.0
+* Travis Updates
+* Stop interceptor chain to avoid stop application exceptions on not found interceptors
+
 ## 1.1.0
 * Updated instructions
 * Updated location of deploy and sample deploy tag
