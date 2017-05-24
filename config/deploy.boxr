@@ -1,1 +1,3 @@
-echo 'DEPLOYING ON: `#now`' > _deploy.tag
+echo 'DEPLOYING ON: `#now`' > config/_deploy.tag
+#!git add config/_deploy.tag
+#!git commit -m "New version deploy"

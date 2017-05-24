@@ -24,17 +24,17 @@ component extends="coldbox.system.Interceptor" accessors="true"{
 		// Try to locate the path
 		variables.tagFilepath 			= locateFilePath( getSetting( "autodeploy" ).tagFile );
 		variables.deployCommandObject 	= getSetting( "autoDeploy" ).deployCommandObject;
-		
-		// Validate it
+			
+		// Validate it and create it if not found.
 		if( len( variables.tagFilepath ) eq 0 ){
-			throw( 'Tag file not found: #getSetting( "autodeploy" ).tagFile#. Please create the file or check the location of the tag file' );
+			fileWrite( getSetting( "autodeploy" ).tagFile, "DEPLOYING ON: #now()#" );
 		}
 		
 		// Save TimeStamp
 		setSetting( "_deploytagTimestamp", fileLastModified( variables.tagFilepath ) );
 		
 		if( log.canInfo() ){
-			log.info("Deploy tag registered successfully.");
+			log.info( "Deploy tag registered successfully." );
 		}
 	}
 
@@ -65,14 +65,18 @@ component extends="coldbox.system.Interceptor" accessors="true"{
 								}
 							}
 							
-							// Mark Application for shutdown
-							applicationStop();
-							
 							// Log Reloading
 							if( log.canInfo() ){
 								log.info( "Deploy tag reloaded successfully." );
 							}
-						} catch(Any e) {
+
+							// Mark Application for shutdown
+							applicationStop();
+
+							// Relocate to site root for this to take effect
+							location( "/", "false", "301" );
+							
+						} catch( Any e ){
 							//Log Error
 							log.error( "Error in deploy tag: #e.message# #e.detail#", e.stackTrace );
 						}
