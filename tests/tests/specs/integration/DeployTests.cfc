@@ -8,6 +8,10 @@ component extends="coldbox.system.testing.BaseTestCase" appMapping="root"{
 	// executes before all suites+specs in the run() method
 	function beforeAll(){
 		reset();
+		var configTagPath = expandPath( "/root/config/.deploy.tag" );
+		if( fileExists( configTagPath ) ){
+			fileDelete( configTagPath );
+		}
 		super.beforeAll();
 	}
 

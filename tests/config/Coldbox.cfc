@@ -6,7 +6,7 @@
 		// coldbox directives
 		coldbox = {
 			//Application Setup
-			appName 				= "Your app Name Here",
+			appName 				= "Module Tester",
 
 			//Development Settings
 			reinitPassword			= "",
