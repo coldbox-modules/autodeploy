@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+## 1.3.0
+* Travis updates
+* Recipe updated with git commits if enabled.
+* creation of tag automatically if not existent.
+
 ## 1.2.0
 * Travis Updates
 * Stop interceptor chain to avoid stop application exceptions on not found interceptors
