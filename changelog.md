@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-## 1.3.1
+## 1.4.0
 * Relocation fix due to chrome caching.
+* New setting relocateOnDeploy that can relocate the user once the application stop has fired
 
 ## 1.3.0
 * Travis updates
