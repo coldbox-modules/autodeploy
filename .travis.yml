@@ -42,5 +42,5 @@ after_failure:
   - cat `box system-log`
 
 after_success:
-  # Publish module to forgebox
-  - cd $TRAVIS_BUILD_DIR && box forgebox publish
+  # Publish module to forgebox only on master
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then cd $TRAVIS_BUILD_DIR && box forgebox publish; fi

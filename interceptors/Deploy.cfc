@@ -75,7 +75,7 @@ component extends="coldbox.system.Interceptor" accessors="true"{
 							applicationStop();
 
 							// Relocate if config setting has URL for this to take effect
-							if(len(variables.relocateOnDeploy)){
+							if( len( variables.relocateOnDeploy ) ){
 								location( variables.relocateOnDeploy, "false", "302" );
 							}
 							
