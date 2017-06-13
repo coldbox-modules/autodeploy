@@ -71,7 +71,9 @@ component {
 			// The tag file location, realtive or absolute
 			"tagFile" = "config/_deploy.tag",
 			// The model to use for running deployment commands. Must be a valid WireBox mapping
-			"deployCommandObject" = ""
+			"deployCommandObject" = "",
+			// when a deploy is detected, location that request should be redirected to (default is none = no redirect will occur)
+			"relocateOnDeploy" = ""
 		};
 
 		// incorporate settings
