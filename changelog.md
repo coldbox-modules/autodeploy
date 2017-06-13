@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+## 1.3.1
+* Relocation fix due to chrome caching.
+
 ## 1.3.0
 * Travis updates
 * Recipe updated with git commits if enabled.

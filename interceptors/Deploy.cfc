@@ -74,7 +74,7 @@ component extends="coldbox.system.Interceptor" accessors="true"{
 							applicationStop();
 
 							// Relocate to site root for this to take effect
-							location( "/", "false", "301" );
+							location( "/", "false" );
 							
 						} catch( Any e ){
 							//Log Error
