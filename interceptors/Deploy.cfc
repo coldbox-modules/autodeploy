@@ -24,6 +24,7 @@ component extends="coldbox.system.Interceptor" accessors="true"{
 		// Try to locate the path
 		variables.tagFilepath 			= locateFilePath( getSetting( "autodeploy" ).tagFile );
 		variables.deployCommandObject 	= getSetting( "autoDeploy" ).deployCommandObject;
+		variables.relocateOnDeploy 		= getSetting( "autoDeploy" ).relocateOnDeploy;
 			
 		// Validate it and create it if not found.
 		if( len( variables.tagFilepath ) eq 0 ){
@@ -73,8 +74,10 @@ component extends="coldbox.system.Interceptor" accessors="true"{
 							// Mark Application for shutdown
 							applicationStop();
 
-							// Relocate to site root for this to take effect
-							location( "/", "false" );
+							// Relocate if config setting has URL for this to take effect
+							if(len(variables.relocateOnDeploy)){
+								location( variables.relocateOnDeploy, "false", "302" );
+							}
 							
 						} catch( Any e ){
 							//Log Error

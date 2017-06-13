@@ -27,7 +27,9 @@ autodeploy = {
     // The tag file location, realtive or absolute from the root of your application.
     "tagFile" : "config/_deploy.tag",
     // The model to use for running deployment commands. Must be a valid WireBox mapping
-    "deployCommandObject" :  ""
+    "deployCommandObject" :  "",
+    // A URL to redirect to when a deploy is detected. Default is none, in which case no redirect will occur (request will complete normally and app will reinit on next request).
+    "relocateOnDeploy" :  ""
 };
 ```
 
