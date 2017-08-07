@@ -76,9 +76,9 @@ component {
 			"relocateOnDeploy" = ""
 		};
 
+		
 		// incorporate settings
 		structAppend( configStruct.autodeploy, autodeploy, true );
-
 	}
 
 }

@@ -23,20 +23,29 @@ component extends="coldbox.system.Interceptor" accessors="true"{
 	* Configure the interceptor
 	*/
 	function configure(){
-		variables.moduleConfig 	= controller.getSetting( "autoDeploy" );
 	}
 
 	/**
 	* Register the tag
 	*/
 	function afterConfigurationLoad(){
+		// Setup Configuration
+		variables.moduleConfig 			= controller.getSetting( "autoDeploy" );
 		variables.tagFilepath 			= locateFilePath( variables.moduleConfig.tagFile );
 		variables.deployCommandObject 	= variables.moduleConfig.deployCommandObject;
 		variables.relocateOnDeploy 		= variables.moduleConfig.relocateOnDeploy;
 			
-		// Validate it and create it if not found.
+		// Validate Timestamp exists, else create one.
 		if( len( variables.tagFilepath ) eq 0 ){
-			fileWrite( variables.moduleConfig.tagFile, "DEPLOYING ON: #now()#" );
+			// Verify absolute or relative
+			var oFile = createObject( "java", "java.io.File" ).init( variables.moduleConfig.tagFile );
+			if( oFile.isAbsolute() ){
+				variables.tagFilePath = variables.moduleConfig.tagFile;
+			} else {
+				variables.tagFilePath = expandPath( "#controller.getSetting( 'appMapping' )#/#variables.moduleConfig.tagFile#" );
+			}
+			// Create it
+			fileWrite( variables.tagFilepath , "DEPLOYING ON: #now()#" );
 		}
 		
 		// Save TimeStamp

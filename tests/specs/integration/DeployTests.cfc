@@ -1,14 +1,14 @@
 /**
 * My BDD Test
 */
-component extends="coldbox.system.testing.BaseTestCase" appMapping="root"{
+component extends="coldbox.system.testing.BaseTestCase"{
 	
 /*********************************** LIFE CYCLE Methods ***********************************/
 
 	// executes before all suites+specs in the run() method
 	function beforeAll(){
 		reset();
-		var configTagPath = expandPath( "/root/config/.deploy.tag" );
+		var configTagPath = expandPath( "/root/config/_deploy.tag" );
 		if( fileExists( configTagPath ) ){
 			fileDelete( configTagPath );
 		}
