@@ -24,7 +24,11 @@ component extends="coldbox.system.Interceptor" accessors="true"{
 		// Try to locate the path
 		variables.tagFilepath 			= locateFilePath( getSetting( "autodeploy" ).tagFile );
 		variables.deployCommandObject 	= getSetting( "autoDeploy" ).deployCommandObject;
-		variables.relocateOnDeploy 		= getSetting( "autoDeploy" ).relocateOnDeploy;
+		if( structKeyExists( getSetting( "autoDeploy" ), "relocateOnDeploy" ) ){
+			variables.relocateOnDeploy 		= getSetting( "autoDeploy" ).relocateOnDeploy;
+		} else {
+			variables.relocateOnDeploy 		= "";
+		}
 			
 		// Validate it and create it if not found.
 		if( len( variables.tagFilepath ) eq 0 ){
