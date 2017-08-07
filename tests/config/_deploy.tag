@@ -1,2 +1,0 @@
-DEPLOYING ON: {ts '2017-05-24 15:48:40'}
-asdf

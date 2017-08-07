@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+## 1.5.0
+* Updated to use consistent Ortus Module Structure
+* More checks on defaults for configuration
+* Updated to use `getFileInfo` instead of java core
+
 ## 1.4.0
 * Relocation fix due to chrome caching.
 * New setting relocateOnDeploy that can relocate the user once the application stop has fired

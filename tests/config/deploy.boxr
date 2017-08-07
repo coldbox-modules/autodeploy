@@ -1,1 +1,0 @@
-echo 'DEPLOYING ON: `#now`' > config/_deploy.tag
