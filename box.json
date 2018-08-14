@@ -9,7 +9,7 @@
         "workbench":"git+https://github.com/Ortus-Solutions/unified-workbench.git"
     },
     "devDependencies":{
-        "testbox":"2.3.0+00044"
+        "testbox":"^2.3.0"
     },
     "installPaths":{
         "testbox":"testbox",
