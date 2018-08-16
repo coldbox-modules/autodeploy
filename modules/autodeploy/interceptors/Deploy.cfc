@@ -100,12 +100,14 @@ component extends="coldbox.system.Interceptor" accessors="true"{
 							//Log Error
 							log.error( "Error in deploy tag: #e.message# #e.detail#", e.stackTrace );
 						}
+
+						// stop interception chain
+						return true;
+
 					} // end if dateCompare
 				} //end lock
 			} // end if dateCompare
 
-			// stop interception chain
-			return true;
 			
 		} // end if setting exists
 		else {
