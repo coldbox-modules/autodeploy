@@ -26,7 +26,7 @@ component {
 	function configure(){
 		// Interceptors
 		interceptors = [
-			{ class="#moduleMapping#.interceptors.Deploy", name="deploy@#this.modelNamespace#" }
+			{ class="#moduleMapping#.interceptors.Deploy", name="deploy" }
 		];
 	}
 

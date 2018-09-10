@@ -12,9 +12,9 @@
         "testbox":"^2.8.0"
     },
     "installPaths":{
-        "coldbox":"coldbox",
-        "testbox":"testbox",
-        "cbvalidation":"modules/cbvalidation/"
+        "coldbox":"coldbox/",
+        "testbox":"testbox/",
+        "cbvalidation":"modules/cbvalidation"
     },
     "testbox":{
         "runner":"http://localhost:60299/tests/runner.cfm"
