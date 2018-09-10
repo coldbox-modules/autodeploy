@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/coldbox-modules/cbox-autodeploy.svg?branch=development)](https://travis-ci.org/coldbox-modules/cbox-autodeploy)
+[![Build Status](https://travis-ci.org/coldbox-modules/autodeploy.svg?branch=development)](https://travis-ci.org/coldbox-modules/autodeploy)
 
 # WELCOME TO THE AUTODEPLOY MODULE
 This module checks a tag file for timestamp modifications and if detected it will then continue to stop the ColdFusion application via `applicationStop()`.  It can also be optionally configured to execute a deploy command object when the timestamp check is detected.
@@ -7,7 +7,7 @@ This module checks a tag file for timestamp modifications and if detected it wil
 Apache License, Version 2.0.
 
 ## IMPORTANT LINKS
-- https://github.com/coldbox-modules/cbox-autodeploy
+- https://github.com/coldbox-modules/autodeploy
 
 ## SYSTEM REQUIREMENTS
 - Lucee 4.5+
