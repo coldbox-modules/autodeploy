@@ -7,7 +7,7 @@ notifications:
 env:
   global:
     - MODULE_ID=autodeploy
-    - TARGET_VERSION=1.6.0
+    - TARGET_VERSION=1.7.0
   matrix:
     - ENGINE=lucee@45
     - ENGINE=lucee@5
